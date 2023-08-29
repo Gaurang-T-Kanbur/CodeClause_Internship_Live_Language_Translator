@@ -1,0 +1,85 @@
+/* Apply background image */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('images/antest.jfif');
+  background-size: 100% 100%; /* Use 'cover' for better responsiveness */
+  background-position: center;
+  opacity: 0; /* Initially set opacity to 0 */
+  animation: fadeInBackground 9s ease-in-out forwards; /* Apply the animation */
+}
+
+@keyframes fadeInBackground {
+  to {
+    opacity: 1; /* Fade the background in */
+  }
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Adjust this property to position content slightly below */
+  width: 100vw;
+  height: 100vh;
+  background-image: url('images/an1.jpg');
+  background-size: 100% 100%;
+  background-position: center; /* Adjust this property to position the image */
+  transition: opacity 1s ease-in-out;
+}
+
+
+
+/* Other styles as previously mentioned... */
+
+/* Hide the container when animation finished */
+.intro-container.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Fade-in animation for the image */
+.intro-image {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* Responsive and attractive start button */
+.start-button {
+  width: 100px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  padding: 0;
+  border: none;
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Glass blur effect */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'Aparajita', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgb(255, 253, 253);
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.start-button:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.13); /* Darker background on hover */
+}
+
